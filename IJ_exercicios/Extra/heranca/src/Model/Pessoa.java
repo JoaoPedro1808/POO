@@ -1,8 +1,8 @@
 package Model;
 
 public class Pessoa {
-    String nome;
-    String telefone;
+    private String nome;
+    private String telefone;
 
     //metodo construtor padrão (vazio e sem parámetros)
     public Pessoa() {
@@ -22,5 +22,22 @@ public class Pessoa {
     }
     public void mudarNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
