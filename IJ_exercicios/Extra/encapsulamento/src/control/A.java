@@ -33,6 +33,6 @@ public class A {
     }
     public void testeF(){
         F f = new F();
-        f.
+        //f.
     }
 }
