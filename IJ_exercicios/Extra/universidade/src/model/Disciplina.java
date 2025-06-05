@@ -8,9 +8,11 @@ public class Disciplina {
     private String nome;
     private int cargaHoraria;
     private Set<Turma> turmas;
+    private Cursos cursos;
 
-    public Disciplina(String codigo, String nome, int cargaHoraria) {
+    public Disciplina(String codigo, String nome, int cargaHoraria,  Cursos cursos) {
         this.turmas = new HashSet<Turma>();
+        this.cursos = cursos;
         this.codigo = codigo;
         this.nome = nome;
         this.cargaHoraria = cargaHoraria;
@@ -40,13 +42,20 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
     }
 
-
     public Set<Turma> getTurmas() {
         return turmas;
     }
 
     public void setTurmas(Set<Turma> turmas) {
         this.turmas = turmas;
+    }
+
+    public Cursos getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(Cursos cursos) {
+        this.cursos = cursos;
     }
 
     public void addturma(Turma turma) {
