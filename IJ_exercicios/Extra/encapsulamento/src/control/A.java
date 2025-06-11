@@ -15,24 +15,24 @@ public class A {
     public void testeA() {
         A a1 = new A();
         A a2 = new A();
-        a1.a = a2;
+
     }
 
 
     public void testeB(){
         B b = new B();
-        //b.
+        //b. ba3
     }
     public void testeC(){
         C c = new C();
-        //c.
+        // c. ca3
     }
     public void testeE(){
-        F f = new F();
-        //f.
+        E e = new E();
+        //e. aa1, aa2, aa3
     }
     public void testeF(){
         F f = new F();
-        //f.
+        //f. aa3 aa4
     }
 }
