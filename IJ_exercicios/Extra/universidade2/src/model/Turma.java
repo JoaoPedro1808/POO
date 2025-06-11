@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Set;
+
 public class Turma {
     private String cod;
     private String diadasemana;
@@ -7,14 +9,16 @@ public class Turma {
     private String horario;
     private String sala;
     private Disciplina disciplina;
+    private Professor professor;
 
-    public Turma(String cod, String diadasemana, int cargahoraria, String horario, String sala, Disciplina disciplina) {
+    public Turma(String cod, String diadasemana, int cargahoraria, String horario, String sala, Disciplina disciplina, Professor professor) {
         this.cod = cod;
         this.diadasemana = diadasemana;
         this.cargahoraria = cargahoraria;
         this.horario = horario;
         this.sala = sala;
         this.disciplina = disciplina;
+        this.professor = professor;
     }
 
     public String getCod() {
@@ -63,5 +67,13 @@ public class Turma {
 
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
     }
 }

@@ -9,10 +9,11 @@ public class Programa {
     public static void main(String[] args) {
         Disciplina poo = new Disciplina("IBM5132", 80, "POO");
         Professor profjuan = new Professor("Juan Lopéz da Silva","38456873945","Doutor",poo);
-        Turma poojuan = new Turma("8003","Segunda-feira",80,"M1 a M4","302",poo);
+        Turma poojuan = new Turma("8003","Segunda-feira",80,"M1 a M4","302",poo, profjuan);
 
         poo.addprof(profjuan);
         poo.addturma(poojuan);
+        profjuan.addturma(poojuan);
 
         for (Turma turma : poo.getTurmas()) {
             System.out.println(turma.getDisciplina().getNome());
@@ -20,6 +21,10 @@ public class Programa {
 
         for (Professor professor : poo.getProfessores()) {
             System.out.println(professor.getNome());
+        }
+
+        for (Turma turma : poo.getTurmas()) {
+            System.out.println(turma.getProfessor().getNome());
         }
     }
 }

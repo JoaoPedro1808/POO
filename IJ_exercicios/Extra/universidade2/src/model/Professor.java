@@ -1,12 +1,17 @@
 package model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Professor {
         private String nome;
         private String matri;
         private String titulacao;
         private Disciplina disciplina;
+        private Set<Turma> turmas;
 
     public Professor(String nome, String matri, String titulacao, Disciplina disciplina) {
+        this.turmas = new HashSet<Turma>();
         this.nome = nome;
         this.matri = matri;
         this.titulacao = titulacao;
@@ -43,5 +48,21 @@ public class Professor {
 
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
+    }
+
+    public Set<Turma> getTurmas() {
+        return turmas;
+    }
+
+    public void setTurmas(Set<Turma> turmas) {
+        this.turmas = turmas;
+    }
+
+    public void addturma (Turma turma) {
+        this.turmas.add(turma);
+    }
+
+    public void removeturma (Turma turma) {
+        this.turmas.remove(turma);
     }
 }
